@@ -2,7 +2,7 @@
 const path = require('path')
 
 module.exports = {
-    // production 环境
+    // production 环境.
     build: {
         // 使用 config/prod.env.js 中定义的编译环境
         env: require('./prod.env'),
