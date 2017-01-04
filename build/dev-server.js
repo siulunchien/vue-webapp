@@ -16,6 +16,9 @@ const proxyMiddleware = require('http-proxy-middleware')
 // 使用 dev 环境的 webpack 配置
 const webpackConfig = require('./webpack.dev.conf')
 
+// 使用 dev 环境的路由配置
+const apiRoutes = require('./dev-router')
+
 // 如果没有指定运行端口，使用 config.dev.port 作为运行端口
 const port = process.env.PORT || config.dev.port
 
@@ -24,6 +27,9 @@ const proxyTable = config.dev.proxyTable
 
 // 使用 express 启动一个服务
 const app = express()
+
+// 使用 appRoutes
+app.use('/api', apiRoutes)
 
 // 启动 webpack 进行编译
 const compiler = webpack(webpackConfig)
