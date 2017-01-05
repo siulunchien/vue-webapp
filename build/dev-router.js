@@ -18,26 +18,26 @@ const apiRoutes = express.Router()
 
 // 获取商家数据接口
 apiRoutes.get('/seller', (req, res) => {
-    res.json({
-        errno: 0,
-        data: seller
-    })
+  res.json({
+    errno: 0,
+    data: seller
+  })
 })
 
 // 获取商品接口
 apiRoutes.get('/goods', (req, res) => {
-    res.json({
-        errno: 0,
-        data: goods
-    })
+  res.json({
+    errno: 0,
+    data: goods
+  })
 })
 
 // 获取评价接口
 apiRoutes.get('/ratings', (req, res) => {
-    res.json({
-        errno: 0,
-        data: ratings
-    })
+  res.json({
+    errno: 0,
+    data: ratings
+  })
 })
 
 module.exports = apiRoutes
