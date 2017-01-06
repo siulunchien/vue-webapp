@@ -1,0 +1,3 @@
+@function p2r($px) {
+  @return $px / 75 * 1rem;
+}
