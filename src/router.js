@@ -1,4 +1,11 @@
-export default function (router, app) {
+import VueRouter from 'vue-router'
+
+export default function (app) {
+  // 创建一个路由器实例
+  const router = new VueRouter({
+    linkActiveClass: 'active'
+  })
+
   // 路由路径规则配置
   router.map({
     // 商品列表页
