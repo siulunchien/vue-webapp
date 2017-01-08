@@ -1,0 +1,115 @@
+@import "~sass/fn";
+
+.header{
+  position: relative;
+  color: #fff;
+  background: rgba(7, 17, 27, 0.5);
+  &>.content-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: p2r(48) p2r(24) p2r(36) p2r(48);
+    &>.avatar>img{
+      width: p2r(128);
+      height: p2r(128);
+      border-radius: p2r(4);
+    }
+    &>.content{
+      margin-left: p2r(32);
+      font-weight: 200;
+      &>.title{
+        display: flex;
+        align-items: center;
+        margin-bottom: p2r(16);
+        &>.name{
+          font-weight: bold;
+        }
+        &>.brand{
+          width: p2r(60);
+          height: p2r(36);
+          margin-right: p2r(12);
+          @include bgimg($url: "./images/brand");
+        }
+      }
+      &>.description{
+        margin-bottom: p2r(20);
+      }
+      &>.support{
+        display: flex;
+        align-items: center;
+        &>.supportIcon{
+          width: p2r(24);
+          height: p2r(24);
+          margin-right: p2r(8);
+          &.decrease{
+            @include bgimg($url: "./images/decrease_1");
+          }
+          &.discount{
+            @include bgimg($url: "./images/discount_1");
+          }
+          &.guarantee{
+            @include bgimg($url: "./images/guarantee_1");
+          }
+          &.invoice{
+            @include bgimg($url: "./images/invoice_1");
+          }
+          &.special{
+            @include bgimg($url: "./images/special_1");
+          }
+        }
+      }
+    }
+    &>.support-count{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      right: p2r(24);
+      bottom: p2r(36);
+      padding: p2r(14) p2r(16);
+      border-radius: p2r(28);
+      font-weight: 200;
+      background: rgba(0, 0, 0, 0.2);
+      &>span{
+        margin-right: p2r(4);
+      }
+    }
+  }
+  &>.bulletin-wrapper{
+    display: flex;
+    align-items: center;
+    height: p2r(56);
+    padding: 0 p2r(24);
+    background: rgba(7, 17, 27, 0.2);
+    &>.bulletin-icon{
+      flex-shrink: 0;
+      width: p2r(44);
+      height: p2r(24);
+      @include bgimg($url: "./images/bulletin");
+    }
+    &>.bulletin-text{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0 p2r(8);
+    }
+    &>.icon-keyboard_arrow_right{
+      flex-shrink: 0;
+    }
+  }
+  &>.header-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    z-index: -1;
+    filter: blur(20px);
+    &>img{
+      width: 80%;
+      height: auto;
+      margin-top: p2r(48);
+    }
+  }
+}
