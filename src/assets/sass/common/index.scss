@@ -1,11 +1,14 @@
 /*变量*/
-@import "../fn.scss";
+@import "../fn";
 
 /*重置样式*/
-@import "./reset.scss";
+@import "./reset";
 
 /*字体大小样式*/
-@import "./fontsize.scss";
+@import "./fontsize";
+
+/*图标字体*/
+@import "./icon";
 
 *{
   box-sizing: border-box;
