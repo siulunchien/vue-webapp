@@ -29,7 +29,7 @@ module.exports = {
   },
   resolve: {
     // 自动补全的扩展名
-    extensions: ['', '.js', '.vue'],
+    extensions: ['', '.js', '.vue', 'scss'],
 
     // 不进行自动补全或处理的文件或文件夹
     fallback: [path.join(__dirname, '../node_modules')],
@@ -40,7 +40,9 @@ module.exports = {
         'src': path.resolve(__dirname, '../src'),
         'assets': path.resolve(__dirname, '../src/assets'),
         'components': path.resolve(__dirname, '../src/components'),
-        'views': path.resolve(__dirname, '../src/views')
+        'views': path.resolve(__dirname, '../src/views'),
+        'api': path.resolve(__dirname, '../src/api'),
+        'sass': path.resolve(__dirname, '../src/assets/sass')
     }
   },
   resolveLoader: {
