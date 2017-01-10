@@ -112,4 +112,20 @@
       margin-top: p2r(48);
     }
   }
+  &>.popup-wrapper{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 10rem;
+    height: 100%;
+    transform: translateX(-50%);
+    background: rgba(7, 17, 27, 0.8);
+    z-index: 10;
+  }
+  &>.popup-transition{
+    transition: all .5s ease;
+  }
+  &>.popup-leave,&>.popup-enter{
+    opacity: 0;
+  }
 }
