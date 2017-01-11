@@ -33,6 +33,13 @@
       <img :src="seller.avatar" alt="">
     </div>
     <div v-show="isPopup" class="popup-wrapper" transition="popup">
+      <div class="popup-main">
+        <div class="popup-content">
+        </div>
+      </div>
+      <div class="popup-close">
+        <i class="icon-close" @click="closePopup"></i>
+      </div>
     </div>
   </div>
 </template>

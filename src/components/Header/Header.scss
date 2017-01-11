@@ -120,7 +120,22 @@
     height: 100%;
     transform: translateX(-50%);
     background: rgba(7, 17, 27, 0.8);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     z-index: 10;
+    &>.popup-main{
+      min-height: 100%;
+      &>.popup-content{
+        padding: p2r(128) p2r(72);
+      }
+    }
+    &>.popup-close{
+      width: p2r(64);
+      height: p2r(64);
+      font-size: p2r(64);
+      margin: p2r(-128) auto 0 auto;
+      color: rgba(255, 255, 255, 0.5);
+    }
   }
   &>.popup-transition{
     transition: all .5s ease;
