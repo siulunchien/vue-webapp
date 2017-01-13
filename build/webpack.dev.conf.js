@@ -38,6 +38,11 @@ module.exports = merge(baseWebpackConfig, {
       'process.env': config.dev.env
     }),
 
+    // 使用 ProvidePlugin 加载使用率高的依赖库
+    new webpack.ProvidePlugin({
+      axios: 'axios'
+    }),
+
     // 为组件分配 ID ，通过这个插件 webpack 可以分析和优先考虑使用最多的模块，并为它们分配最小的 ID
     new webpack.optimize.OccurenceOrderPlugin(),
 
