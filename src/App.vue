@@ -26,15 +26,17 @@ export default {
   },
   created () {
     this.getSellerInfo()
+    .then(res => {
+      res = res.data
+      if(res.errno === errno.ERR_OK){
+        this.seller = res.data
+      }
+    })
+
   },
   methods: {
     getSellerInfo () {
-      this.$http.get(seller.sellerInfo).then(res => {
-        res = res.body
-        if(res.errno === errno.ERR_OK){
-          this.seller = res.data
-        }
-      })
+      return axios.get(seller.sellerInfo)
     }
   },
   components: {
