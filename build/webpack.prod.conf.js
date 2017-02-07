@@ -36,6 +36,12 @@ var webpackConfig = merge(baseWebpackConfig, {
         warnings: false
       }
     }),
+
+    // 使用 ProvidePlugin 加载使用率高的依赖库
+    new webpack.ProvidePlugin({
+      axios: 'axios'
+    }),
+
     new webpack.optimize.OccurenceOrderPlugin(),
     // extract css into its own file
     new ExtractTextPlugin(utils.assetsPath('css/[name].[contenthash].css')),
